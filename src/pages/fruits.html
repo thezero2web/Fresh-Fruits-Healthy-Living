@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Fresh Fruits - Fresh Fruits & Healthy Living</title>
+    <link rel="stylesheet" href="../style/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fa-solid fa-leaf"></i> <a href="../index.html">FreshFruits</a></div>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#">Ingredients <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="vitamin.html">Vitamins</a>
+                        <a href="minerals.html">Minerals</a>
+                        <a href="protein.html">Proteins</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="ourplan.html">Our Plan</a>
+                <div class="search-box" data-aos="fade-left">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="vitamin-hero" data-aos="fade-up">
+                <h1>Fresh Fruits Collection</h1>
+                <p class="subtitle">Discover the amazing health benefits of nature's sweetest gifts</p>
+            </div>
+
+            <div class="search-section" data-aos="fade-up" data-aos-delay="100">
+                <div class="search-container">
+                    <input type="text" id="fruit-search" placeholder="Search fruits by name or benefits..." class="search-input">
+                    <button onclick="fruitsManager.searchFruits(document.getElementById('fruit-search').value)" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+            <div class="fruits-container" data-aos="fade-up" data-aos-delay="200">
+                <!-- Fruits will be dynamically loaded here by fruits.js -->
+            </div>
+
+            <div class="fruits-info" data-aos="fade-up" data-aos-delay="300">
+                <h2>Why Choose Fresh Fruits?</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Heart Health</h3>
+                        <p>Fruits are rich in fiber, potassium, and antioxidants that support cardiovascular health.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Immune Support</h3>
+                        <p>High vitamin C content helps strengthen your immune system and fight off infections.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Brain Function</h3>
+                        <p>Antioxidants in fruits help protect brain cells and improve cognitive function.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Eye Health</h3>
+                        <p>Fruits rich in vitamin A and carotenoids support healthy vision and eye function.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seasonal-guide" data-aos="fade-up" data-aos-delay="400">
+                <h2>Seasonal Fruit Guide</h2>
+                <div class="seasons-grid">
+                    <div class="season-card">
+                        <h3>Spring</h3>
+                        <ul>
+                            <li>Strawberries</li>
+                            <li>Cherries</li>
+                            <li>Apricots</li>
+                            <li>Pineapples</li>
+                        </ul>
+                    </div>
+                    <div class="season-card">
+                        <h3>Summer</h3>
+                        <ul>
+                            <li>Watermelon</li>
+                            <li>Peaches</li>
+                            <li>Blueberries</li>
+                            <li>Mangoes</li>
+                        </ul>
+                    </div>
+                    <div class="season-card">
+                        <h3>Fall</h3>
+                        <ul>
+                            <li>Apples</li>
+                            <li>Pears</li>
+                            <li>Grapes</li>
+                            <li>Cranberries</li>
+                        </ul>
+                    </div>
+                    <div class="season-card">
+                        <h3>Winter</h3>
+                        <ul>
+                            <li>Oranges</li>
+                            <li>Grapefruits</li>
+                            <li>Pomegranates</li>
+                            <li>Kiwi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nutrition-tips" data-aos="fade-up" data-aos-delay="500">
+                <h2>Fruit Nutrition Tips</h2>
+                <div class="tips-container">
+                    <div class="tip-item">
+                        <h3>🍎 Eat the Rainbow</h3>
+                        <p>Different colored fruits contain different nutrients. Aim to eat fruits of various colors daily.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>⏰ Best Time to Eat</h3>
+                        <p>Eat fruits on an empty stomach or between meals for optimal nutrient absorption.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>🥤 Smoothie Power</h3>
+                        <p>Blend fruits into smoothies for a quick, nutritious meal or snack.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>❄️ Frozen is Fine</h3>
+                        <p>Frozen fruits retain most nutrients and are often more affordable than fresh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="ourplan.html">Our Plan</a>
+                </div>
+                <div class="newsletter">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+                    <a href="https://pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://wa.me/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <p class="footer-text">© 2025 FreshFruits. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Back to top">↑</button>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/fruits.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+
+        // Initialize fruits search functionality
+        document.getElementById('fruit-search').addEventListener('input', function() {
+            fruitsManager.searchFruits(this.value);
+        });
+    </script>
+</body>
+
+</html> 

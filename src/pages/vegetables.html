@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Fresh Vegetables - Fresh Fruits & Healthy Living</title>
+    <link rel="stylesheet" href="../style/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fa-solid fa-leaf"></i> <a href="../index.html">FreshFruits</a></div>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#">Ingredients <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="vitamin.html">Vitamins</a>
+                        <a href="minerals.html">Minerals</a>
+                        <a href="protein.html">Proteins</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="ourplan.html">Our Plan</a>
+                <div class="search-box" data-aos="fade-left">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="vitamin-hero" data-aos="fade-up">
+                <h1>Fresh Vegetables Collection</h1>
+                <p class="subtitle">Explore the nutritional powerhouse of fresh, organic vegetables</p>
+            </div>
+
+            <div class="search-section" data-aos="fade-up" data-aos-delay="100">
+                <div class="search-container">
+                    <input type="text" id="vegetable-search"
+                        placeholder="Search vegetables by name, category, or benefits..." class="search-input">
+                    <button
+                        onclick="vegetablesManager.searchVegetables(document.getElementById('vegetable-search').value)"
+                        class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+            <div class="filter-section" data-aos="fade-up" data-aos-delay="150">
+                <h3>Filter by Category:</h3>
+                <div class="filter-buttons">
+                    <button onclick="vegetablesManager.filterByCategory('Leafy Greens')" class="btn btn-secondary">Leafy
+                        Greens</button>
+                    <button onclick="vegetablesManager.filterByCategory('Cruciferous')"
+                        class="btn btn-secondary">Cruciferous</button>
+                    <button onclick="vegetablesManager.filterByCategory('Root Vegetables')"
+                        class="btn btn-secondary">Root Vegetables</button>
+                    <button onclick="vegetablesManager.filterByCategory('Nightshades')"
+                        class="btn btn-secondary">Nightshades</button>
+                    <button onclick="vegetablesManager.displaySearchResults(vegetablesManager.vegetables)"
+                        class="btn btn-primary">Show All</button>
+                </div>
+            </div>
+
+            <div class="vegetables-container" data-aos="fade-up" data-aos-delay="200">
+                <!-- Vegetables will be dynamically loaded here by vegetables.js -->
+            </div>
+
+            <div class="vegetables-info" data-aos="fade-up" data-aos-delay="300">
+                <h2>The Power of Vegetables</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Nutrient Density</h3>
+                        <p>Vegetables are packed with essential vitamins, minerals, and antioxidants per calorie.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Heart Health</h3>
+                        <p>High fiber content and antioxidants support cardiovascular health and reduce disease risk.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-weight"></i>
+                        <h3>Weight Management</h3>
+                        <p>Low in calories and high in fiber, vegetables help maintain healthy weight.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Disease Prevention</h3>
+                        <p>Regular consumption reduces risk of chronic diseases like cancer and diabetes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seasonal-guide" data-aos="fade-up" data-aos-delay="400">
+                <!-- Seasonal guide will be dynamically loaded here by vegetables.js -->
+            </div>
+
+            <div class="cooking-methods" data-aos="fade-up" data-aos-delay="500">
+                <h2>Healthy Cooking Methods</h2>
+                <div class="methods-grid">
+                    <div class="method-card">
+                        <h3>🥗 Raw</h3>
+                        <p>Eating vegetables raw preserves all nutrients and enzymes. Great for salads and smoothies.
+                        </p>
+                    </div>
+                    <div class="method-card">
+                        <h3>♨️ Steaming</h3>
+                        <p>Gentle cooking method that retains most nutrients while making vegetables tender.</p>
+                    </div>
+                    <div class="method-card">
+                        <h3>🔥 Roasting</h3>
+                        <p>Brings out natural sweetness and creates delicious caramelized flavors.</p>
+                    </div>
+                    <div class="method-card">
+                        <h3>🥘 Stir-frying</h3>
+                        <p>Quick cooking method that preserves crunch and nutrients while adding flavor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="storage-tips" data-aos="fade-up" data-aos-delay="600">
+                <h2>Vegetable Storage Tips</h2>
+                <div class="tips-container">
+                    <div class="tip-item">
+                        <h3>❄️ Refrigerator Storage</h3>
+                        <p>Most vegetables last longer when stored in the refrigerator at 32-40°F (0-4°C).</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>🌿 Separate Storage</h3>
+                        <p>Store ethylene-producing vegetables (like tomatoes) away from ethylene-sensitive ones.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>💧 Moisture Control</h3>
+                        <p>Use perforated bags or containers to maintain proper humidity levels.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>🕒 First In, First Out</h3>
+                        <p>Use older vegetables first to minimize waste and ensure freshness.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="daily-recommendations" data-aos="fade-up" data-aos-delay="700">
+                <h2>Daily Vegetable Recommendations</h2>
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <h3>🥬 Leafy Greens</h3>
+                        <p><strong>Daily Amount:</strong> 2-3 cups</p>
+                        <p><strong>Examples:</strong> Spinach, Kale, Arugula, Swiss Chard</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>🥦 Cruciferous</h3>
+                        <p><strong>Daily Amount:</strong> 1-2 cups</p>
+                        <p><strong>Examples:</strong> Broccoli, Cauliflower, Brussels Sprouts</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>🥕 Root Vegetables</h3>
+                        <p><strong>Daily Amount:</strong> 1-2 cups</p>
+                        <p><strong>Examples:</strong> Carrots, Sweet Potatoes, Beets</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>🫑 Colorful Veggies</h3>
+                        <p><strong>Daily Amount:</strong> 2-3 cups</p>
+                        <p><strong>Examples:</strong> Bell Peppers, Tomatoes, Zucchini</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="organic-vs-conventional" data-aos="fade-up" data-aos-delay="800">
+                <h2>Organic vs Conventional</h2>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h3>🌱 Organic Vegetables</h3>
+                        <ul>
+                            <li>Grown without synthetic pesticides</li>
+                            <li>No genetically modified organisms (GMOs)</li>
+                            <li>Better for soil health and biodiversity</li>
+                            <li>Often higher in certain nutrients</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <h3>🏭 Conventional Vegetables</h3>
+                        <ul>
+                            <li>May contain pesticide residues</li>
+                            <li>Generally more affordable</li>
+                            <li>Widely available year-round</li>
+                            <li>Still nutritious when properly washed</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="washing-tips">
+                    <h3>Washing Tips for All Vegetables:</h3>
+                    <p>Always wash vegetables thoroughly under running water, even if they're organic. Use a vegetable
+                        brush for root vegetables and consider soaking leafy greens in cold water to remove dirt and
+                        debris.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="ourplan.html">Our Plan</a>
+                </div>
+                <div class="newsletter">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" class="instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+                    <a href="https://pinterest.com" target="_blank" class="pinterest"><i
+                            class="fab fa-pinterest"></i></a>
+                    <a href="https://wa.me/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <p class="footer-text">© 2025 FreshFruits. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Back to top">↑</button>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/vegetable.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+
+        // Initialize vegetables search functionality
+        document.getElementById('vegetable-search').addEventListener('input', function () {
+            vegetablesManager.searchVegetables(this.value);
+        });
+    </script>
+</body>
+
+</html>

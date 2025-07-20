@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Superfood Seeds - Fresh Fruits & Healthy Living</title>
+    <link rel="stylesheet" href="../style/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fa-solid fa-leaf"></i> <a href="../index.html">FreshFruits</a></div>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#">Ingredients <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="vitamin.html">Vitamins</a>
+                        <a href="minerals.html">Minerals</a>
+                        <a href="protein.html">Proteins</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="ourplan.html">Our Plan</a>
+                <div class="search-box" data-aos="fade-left">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="vitamin-hero" data-aos="fade-up">
+                <h1>Superfood Seeds Collection</h1>
+                <p class="subtitle">Discover the incredible nutritional power of nature's tiny superfoods</p>
+            </div>
+
+            <div class="search-section" data-aos="fade-up" data-aos-delay="100">
+                <div class="search-container">
+                    <input type="text" id="seed-search" placeholder="Search seeds by name or benefits..." class="search-input">
+                    <button onclick="seedsManager.searchSeeds(document.getElementById('seed-search').value)" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+            <div class="seeds-container" data-aos="fade-up" data-aos-delay="200">
+                <!-- Seeds will be dynamically loaded here by seeds.js -->
+            </div>
+
+            <div class="nutrition-calculator" data-aos="fade-up" data-aos-delay="300">
+                <!-- Nutrition calculator will be dynamically loaded here by seeds.js -->
+            </div>
+
+            <div class="seeds-info" data-aos="fade-up" data-aos-delay="400">
+                <h2>Why Seeds Are Superfoods</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-dna"></i>
+                        <h3>Complete Proteins</h3>
+                        <p>Many seeds contain all essential amino acids, making them excellent protein sources.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Heart Health</h3>
+                        <p>Rich in omega-3 fatty acids and fiber that support cardiovascular health.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Brain Function</h3>
+                        <p>Essential fatty acids and antioxidants support cognitive function and memory.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-bone"></i>
+                        <h3>Mineral Rich</h3>
+                        <p>Excellent sources of calcium, magnesium, zinc, and other essential minerals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usage-guide" data-aos="fade-up" data-aos-delay="500">
+                <h2>How to Use Seeds</h2>
+                <div class="usage-grid">
+                    <div class="usage-card">
+                        <h3>🌱 Sprinkling</h3>
+                        <p>Add seeds to salads, yogurt, oatmeal, or smoothie bowls for a nutritional boost.</p>
+                    </div>
+                    <div class="usage-card">
+                        <h3>🥤 Smoothies</h3>
+                        <p>Blend seeds into smoothies for added protein, fiber, and healthy fats.</p>
+                    </div>
+                    <div class="usage-card">
+                        <h3>🍞 Baking</h3>
+                        <p>Incorporate seeds into bread, muffins, or energy bars for extra nutrition.</p>
+                    </div>
+                    <div class="usage-card">
+                        <h3>🥗 Salads</h3>
+                        <p>Use seeds as toppings for salads to add crunch and nutritional value.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="storage-tips" data-aos="fade-up" data-aos-delay="600">
+                <h2>Storage & Freshness Tips</h2>
+                <div class="tips-container">
+                    <div class="tip-item">
+                        <h3>❄️ Refrigeration</h3>
+                        <p>Store seeds in the refrigerator to prevent rancidity and maintain freshness.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>🫙 Airtight Containers</h3>
+                        <p>Use airtight containers to protect seeds from moisture and oxidation.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>🌡️ Cool & Dark</h3>
+                        <p>Keep seeds in a cool, dark place away from direct sunlight and heat.</p>
+                    </div>
+                    <div class="tip-item">
+                        <h3>📅 Check Dates</h3>
+                        <p>Regularly check expiration dates and discard any seeds that smell rancid.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="daily-recommendations" data-aos="fade-up" data-aos-delay="700">
+                <h2>Daily Seed Recommendations</h2>
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <h3>Chia Seeds</h3>
+                        <p><strong>Daily Amount:</strong> 1-2 tablespoons</p>
+                        <p><strong>Best Time:</strong> Morning or before exercise</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>Flax Seeds</h3>
+                        <p><strong>Daily Amount:</strong> 1-2 tablespoons (ground)</p>
+                        <p><strong>Best Time:</strong> With breakfast or smoothies</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>Pumpkin Seeds</h3>
+                        <p><strong>Daily Amount:</strong> 1/4 cup</p>
+                        <p><strong>Best Time:</strong> As a snack or in salads</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>Sunflower Seeds</h3>
+                        <p><strong>Daily Amount:</strong> 1/4 cup</p>
+                        <p><strong>Best Time:</strong> As a snack or in trail mix</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="ourplan.html">Our Plan</a>
+                </div>
+                <div class="newsletter">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+                    <a href="https://pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://wa.me/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <p class="footer-text">© 2025 FreshFruits. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Back to top">↑</button>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/seeds.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+
+        // Initialize seeds search functionality
+        document.getElementById('seed-search').addEventListener('input', function() {
+            seedsManager.searchSeeds(this.value);
+        });
+    </script>
+</body>
+
+</html> 
